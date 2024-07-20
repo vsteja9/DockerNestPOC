@@ -1,0 +1,19 @@
+FROM node:21
+
+WORKDIR /Users/vs185268
+
+COPY . .
+
+RUN npm install
+
+RUN npm run build
+RUN rm -rf ./src
+
+# running the server
+CMD [ "npm","run","start:prod" ]
+
+EXPOSE 3000
+
+
+# if we have more than 1 docker file use the below command
+# docker build -t nestprodproject -f Dockerfile.prod .

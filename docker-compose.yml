@@ -1,0 +1,31 @@
+services:
+  nestproject:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4000:3000"
+    # we can include the environment variables as well
+    environment:
+      - PORT=3000
+      - NODE_ENV = development  
+    # for auto reloading the application (mounting on the docker container)
+    volumes:
+      - ./src:/Users/vs185268/src
+  postgresdb:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    # other than password all are optional for postgres
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_USER: postgres
+      POSTGRES_DB: nestDB
+
+
+
+
+
+# docker-compose up --build          ---> build the compose file
+
