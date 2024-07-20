@@ -74,5 +74,8 @@ Nest is [MIT licensed](LICENSE).
 
 
 
+**Containarization of nest project**
+Dockerization of complete backend nest application with postgres DB Image. 
+![image](https://github.com/user-attachments/assets/626147e3-eea1-47e5-bf75-dc12ad1a4e13)
 
-Dockerization of complete backend nest application with postgres DB Image. image you can find docker container images in the above figure.
+image you can find docker container images in the above figure.
